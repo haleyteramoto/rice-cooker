@@ -29,13 +29,13 @@ const NavBar: React.FC = () => {
             <Nav className="mx-auto justify-content-center">
             {currentUser
               ? [
-                <Nav.Link id="add-stuff-nav" href="/add" key="add" active={pathName === '/add'}>
+                <Nav.Link id="add-stuff-nav" href="/add" key="add" active={pathName === '/add'} className="mx-4">
                 Recipes
                 </Nav.Link>,
-                <Nav.Link id="list-stuff-nav" href="/list" key="list" active={pathName === '/list'}>
+                <Nav.Link id="list-stuff-nav" href="/list" key="list" active={pathName === '/list'} className="mx-4">
                 Find Your Ingredients
                 </Nav.Link>,
-                <Nav.Link id="about-nav" href="/about" key="about" active={pathName === '/about'}>
+                <Nav.Link id="about-nav" href="/about" key="about" active={pathName === '/about'} className="mx-4">
                 About
                 </Nav.Link>,
               ]

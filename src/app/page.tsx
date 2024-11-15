@@ -1,19 +1,38 @@
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
+import { Basket3Fill, Search, Share } from 'react-bootstrap-icons';
 
 /** The Home page. */
 const Home = () => (
   <main>
     <Container id="landing-page" fluid className="py-3">
-      <Row className="align-middle text-center">
-        <Col xs={4}>
-          <Image src="next.svg" width="150px" alt="" />
-        </Col>
-
-        <Col xs={8} className="d-flex flex-column justify-content-center">
-          <h1>Welcome to this template</h1>
-          <p>Now get to work and modify this app!</p>
-        </Col>
-      </Row>
+      <Container>
+        <Row className="align-middle text-center">
+          <Col xs={4}>
+            <Basket3Fill size={100} />
+            <h1>One Pot Recipes</h1>
+            <h5>
+              Discover a variety of delicious one-pot recipes that are easy to prepare and perfect for any meal.
+              From hearty stews to flavorful rice dishes, find recipes that simplify cooking and cleanup.
+            </h5>
+          </Col>
+          <Col xs={4}>
+            <Search size={100} />
+            <h1>Find Your Ingredients</h1>
+            <h5>
+              Having trouble finding an ingredient? Use our search feature to find stores/vendors that carry
+              the ingredient you are looking for.
+            </h5>
+          </Col>
+          <Col xs={4}>
+            <Share size={100} />
+            <h1>Share Your Recipes</h1>
+            <h5>
+              Share your own recipes with our community and help others discover new and exciting dishes.
+              Inspire others with your culinary creations and be part of a growing network of home cooks.
+            </h5>
+          </Col>
+        </Row>
+      </Container>
     </Container>
   </main>
 );

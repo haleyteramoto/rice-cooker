@@ -5,13 +5,13 @@ const Footer = () => (
   <footer className="mt-auto py-3 bg-light">
     <Container>
       <Col className="text-center">
-        Department of Information and Computer Sciences
+        © Rice Cooker Recipes
         <br />
-        University of Hawaii
+        By Chiara Duyn, Arron Huang, Justin Kugiyama, and Haley Teramoto
         <br />
-        Honolulu, HI 96822
+        Honolulu, HI
         <br />
-        <a href="http://ics-software-engineering.github.io/nextjs-application-template">Template Home Page</a>
+        <a href="https://github.com/rice-cooker-recipes/rice-cooker.git">GitHub Repo :P</a>
       </Col>
     </Container>
   </footer>

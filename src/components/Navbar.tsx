@@ -18,9 +18,10 @@ const NavBar: React.FC = () => {
       <Container>
         <Navbar.Brand href="/">
           <Image
-            src="rice-cooker.png"
+            src="/rice-cooker.png"
             width="100"
             className="d-inline-block align-top"
+            alt="Rice Cooker Logo"
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

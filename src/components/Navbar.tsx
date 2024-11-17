@@ -4,7 +4,7 @@
 
 import { useSession } from 'next-auth/react';
 import { usePathname } from 'next/navigation';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown, Image } from 'react-bootstrap';
 import { BoxArrowRight, Lock, PersonFill, PersonPlusFill } from 'react-bootstrap-icons';
 
 const NavBar: React.FC = () => {
@@ -16,28 +16,38 @@ const NavBar: React.FC = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="/">Next.js Application Template</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <Image
+            src="/rice-cooker.png"
+            width="100"
+            className="d-inline-block align-top"
+            alt="Rice Cooker Logo"
+          />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto justify-content-start">
+            <Nav className="mx-auto justify-content-center">
             {currentUser
               ? [
-                  <Nav.Link id="add-stuff-nav" href="/add" key="add" active={pathName === '/add'}>
-                    Add Stuff
-                  </Nav.Link>,
-                  <Nav.Link id="list-stuff-nav" href="/list" key="list" active={pathName === '/list'}>
-                    List Stuff
-                  </Nav.Link>,
-                ]
+                <Nav.Link id="add-stuff-nav" href="/add" key="add" active={pathName === '/add'} className="mx-4">
+                Recipes
+                </Nav.Link>,
+                <Nav.Link id="list-stuff-nav" href="/list" key="list" active={pathName === '/list'} className="mx-4">
+                Find Your Ingredients
+                </Nav.Link>,
+                <Nav.Link id="about-nav" href="/about" key="about" active={pathName === '/about'} className="mx-4">
+                About
+                </Nav.Link>,
+              ]
               : ''}
             {currentUser && role === 'ADMIN' ? (
               <Nav.Link id="admin-stuff-nav" href="/admin" key="admin" active={pathName === '/admin'}>
-                Admin
+              Admin
               </Nav.Link>
             ) : (
               ''
             )}
-          </Nav>
+            </Nav>
           <Nav>
             {session ? (
               <NavDropdown id="login-dropdown" title={currentUser}>

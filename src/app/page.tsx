@@ -34,6 +34,19 @@ const Home = () => (
         </Row>
       </Container>
     </Container>
+
+    <Container id="second-section" fluid className="py-5">
+      <Container>
+        <Row className="text-center">
+          <Col>
+            <h2>Join Our Community</h2>
+            <p>Connect with other home cooks, share recipes, and learn new culinary techniques together.</p>
+            <button className="btn btn-dark" type="button">Sign Up</button>
+          </Col>
+        </Row>
+      </Container>
+    </Container>
+
   </main>
 );
 

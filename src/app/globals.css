@@ -3,6 +3,8 @@
   --nat-navbar-bg-color: darkgreen;
   --nat-navbar-bg-rgb: 0, 100, 0;
   --nat-navbar-text-color: black;
+  --first-section-bg: #628473;
+  --second-section-bg: white;
 }
 
 html,
@@ -36,4 +38,13 @@ body .navbar {
 }
 footer, footer a {
   color: var(--nat-navbar-text-color);
+}
+
+#landing-page {
+  background-color: var(--first-section-bg); /* Light green background for first section */
+}
+
+#second-section {
+  background-color: var(--second-section-bg); /* White background for second section */
+  color: black; /* Ensure text is visible on white background */
 }

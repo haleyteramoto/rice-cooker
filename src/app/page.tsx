@@ -1,21 +1,29 @@
 import { Col, Container, Row } from 'react-bootstrap';
-import { Basket3Fill, Search, Share } from 'react-bootstrap-icons';
+import { Search, Share, Shop } from 'react-bootstrap-icons';
 
-/** The Home page. */
+/** landing page */
 const Home = () => (
   <main>
     <Container id="landing-page" fluid className="py-3">
       <Container>
-        <Row className="align-middle text-center">
-          <Col xs={4}>
-            <Basket3Fill size={80} />
+        <Row className="justify-content-center text-center">
+          <Col xs={12}>
             <h2>One Pot Recipes</h2>
             <h5>
               Discover a variety of delicious one-pot recipes that are easy to prepare and perfect for any meal.
-              From hearty stews to flavorful rice dishes, find recipes that simplify cooking and cleanup.
+              From hearty stews to flavorful rice dishes, find recipes that simplify cooking and cleanup!
             </h5>
+            <button className="btn btn-dark mt-4" type="button">Sign Up</button>
           </Col>
-          <Col xs={4}>
+        </Row>
+      </Container>
+    </Container>
+
+    {/* second section */}
+    <Container id="second-section" fluid className="py-5">
+      <Container>
+        <Row className="align-middle text-center">
+          <Col xs={6}>
             <Search size={80} />
             <h2>Find Your Ingredients</h2>
             <h5>
@@ -23,7 +31,7 @@ const Home = () => (
               the ingredient you are looking for.
             </h5>
           </Col>
-          <Col xs={4}>
+          <Col xs={6}>
             <Share size={80} />
             <h2>Share Your Recipes</h2>
             <h5>
@@ -32,9 +40,29 @@ const Home = () => (
             </h5>
           </Col>
         </Row>
+      </Container>
+    </Container>
 
-        {/* Our Mission Section */}
-        <Row className="text-center mt-5">
+    {/* vendor section */}
+    <Container id="vendors-section" fluid className="py-5">
+      <Container>
+        <Row className="text-center">
+          <Col xs={12}>
+            <Shop size={80} />
+            <h2>Find Local Vendors</h2>
+            <h5>
+              Discover local markets and vendors offering fresh ingredients and unique products.
+              Support small businesses and bring the best to your cooking!
+            </h5>
+          </Col>
+        </Row>
+      </Container>
+    </Container>
+
+    {/* our mission */}
+    <Container id="our-mission" fluid className="py-5">
+      <Container>
+        <Row className="text-center">
           <Col xs={12}>
             <h2>Our Mission</h2>
             <h5>
@@ -47,6 +75,9 @@ const Home = () => (
               can be made with minimal equipment and easily sourced ingredients.
             </h5>
             <h5>
+              ~~~
+            </h5>
+            <h5>
               We aim to help students improve their nutrition and save
               money by offering tasty alternatives to fast food.
               Whether you are looking to cook a quick meal in your dorm with
@@ -56,19 +87,6 @@ const Home = () => (
         </Row>
       </Container>
     </Container>
-
-    <Container id="second-section" fluid className="py-5">
-      <Container>
-        <Row className="text-center">
-          <Col>
-            <h2>Join Our Community</h2>
-            <p>Connect with other home cooks, share recipes, and learn new culinary techniques together.</p>
-            <button className="btn btn-dark" type="button">Sign Up</button>
-          </Col>
-        </Row>
-      </Container>
-    </Container>
-
   </main>
 );
 

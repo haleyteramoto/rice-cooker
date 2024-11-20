@@ -5,6 +5,7 @@
   --nat-navbar-text-color: black;
   --first-section-bg: #628473;
   --second-section-bg: white;
+  --vendors-section-bg: #628473;
 }
 
 html,
@@ -19,6 +20,7 @@ body {
   background-image: url('bg.jpg');
   background-size: cover;
 }
+
 body .navbar {
   --bs-navbar-active-color: var(--nat-navbar-highlight-text);
   --bs-navbar-brand-color: var(--nat-navbar-text-color);
@@ -26,6 +28,7 @@ body .navbar {
   --bs-navbar-color: var(--nat-navbar-text-color);
   --bs-navbar-hover-color: var(--nat-navbar-highlight-text);
 }
+
 .bg-dark a.dropdown-item {
   color: var(--nat-navbar-bg);
 }
@@ -36,15 +39,66 @@ body .navbar {
   display: flex;
   flex-direction: column;
 }
+
 footer, footer a {
   color: var(--nat-navbar-text-color);
 }
 
 #landing-page {
-  background-color: var(--first-section-bg); /* Light green background for first section */
+  background-image: url('/landingpage.jpg');
+  background-size: cover; /* Ensures the image fills the section */
+  background-position: center; /* center image */
+  background-repeat: no-repeat; /* prevent image from repeating */
+  height: 70vh;
+  min-height: 500px; /* ensure doesn't shrink too much on small screens */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+}
+
+#landing-page h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#landing-page h5 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+#landing-page .btn {
+  background-color: white;
+  color: black;
+  border: 2px solid black; /* adds a black border for emphasis */
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px; /* adds a slight curve to the edges */
+  text-transform: uppercase;
+}
+
+#landing-page .btn:hover {
+  background-color: black; /* changes background to black on hover */
+  color: white; /* changes text to white on hover */
+  border-color: black;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 #second-section {
-  background-color: var(--second-section-bg); /* White background for second section */
-  color: black; /* Ensure text is visible on white background */
+  background-color: var(--second-section-bg);
+  color: black;
+}
+
+#vendors-section {
+  background-color: var(--vendors-section-bg);
+  color: black;
+}
+
+#our-mission {
+  background-color: var(--second-section-bg);
+  color: black;
 }

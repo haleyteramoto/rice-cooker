@@ -33,13 +33,13 @@ const ListPage = async () => {
   },
   {
     name: 'Foodland',
-    address: ' 2939 Harding Ave, Honolulu, HI',
+    address: '2939 Harding Ave, Honolulu, HI',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT6KU5ZAyIEuCRRxv__dyxYopQyNudjHjKWA&s',
     website: 'https://www.foodland.com/',
   },
   {
     name: 'Whole Foods',
-    address: '1772 S King St, Honolulu, HI',
+    address: '388 Kamakee St Street 100, Honolulu, HI',
     image:
       'https://i0.wp.com/upload.wikimedia.org/wikipedia/commons/thumb/a/a2/'
       + 'Whole_Foods_Market_201x_logo.svg/1200px-Whole_Foods_Market_201x_logo.svg.png',
@@ -47,13 +47,13 @@ const ListPage = async () => {
   },
   {
     name: 'Safeway',
-    address: ' 2939 Harding Ave, Honolulu, HI',
+    address: '2855 E Manoa Rd, Honolulu, HI',
     image: 'https://ih1.redbubble.net/image.3504911045.0325/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg',
     website: 'https://www.safeway.com/',
   },
   {
     name: 'Nijiya Market',
-    address: '1772 S King St, Honolulu, HI',
+    address: '1009 University Ave #101, Honolulu, HI',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtFt20l7MMG8z3elglN3LEPO3Sd2tJfScipg&s',
     website: 'https://www.nijiya.com/',
   },

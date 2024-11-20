@@ -32,6 +32,28 @@ const Home = () => (
             </h5>
           </Col>
         </Row>
+
+        {/* Our Mission Section */}
+        <Row className="text-center mt-5">
+          <Col xs={12}>
+            <h2>Our Mission</h2>
+            <h5>
+              At
+              {' '}
+              <strong>Rice Cooker Recipes</strong>
+              , we understand the struggles of college students—limited kitchen resources,
+              time constraints, and tight budgets.
+              Our mission is to make cooking simple, affordable, and fun by providing recipes that
+              can be made with minimal equipment and easily sourced ingredients.
+            </h5>
+            <h5>
+              We aim to help students improve their nutrition and save
+              money by offering tasty alternatives to fast food.
+              Whether you are looking to cook a quick meal in your dorm with
+              just a rice cooker or find affordable local vendors who carry what you need, we got you covered.
+            </h5>
+          </Col>
+        </Row>
       </Container>
     </Container>
 

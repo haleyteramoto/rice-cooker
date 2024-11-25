@@ -19,7 +19,7 @@ const HomePage = () => {
   };
 
   const handleSearch = () => {
-    // Implement search functionality
+    // implement search functionality
     alert(`Searching ${searchType} for: ${searchQuery}`);
   };
 
@@ -79,7 +79,7 @@ const HomePage = () => {
         </Container>
       </Container>
 
-      {/* Popular Recipes Section */}
+      {/* popular recipes section */}
       <Container id="popular-recipes" fluid className="py-5">
         <Container>
           <Row className="text-center mb-4">
@@ -89,7 +89,7 @@ const HomePage = () => {
             </Col>
           </Row>
           <Row className="g-4">
-            {/* Example Recipe Cards */}
+            {/* example recipe cards */}
             <Col md={4}>
               <Card>
                 <Card.Img variant="top" src="/path-to-recipe-image1.jpg" alt="Recipe 1" />

@@ -1,4 +1,5 @@
 import { getServerSession } from 'next-auth';
+import { redirect } from 'next/navigation';
 import { Col, Container, Row, Table } from 'react-bootstrap';
 import { prisma } from '@/lib/prisma';
 import StuffItem from '@/components/StuffItem';
@@ -12,16 +13,19 @@ const ListPage = async () => {
   loggedInProtectedPage(
     session as {
       user: { email: string; id: string; randomKey: string };
-      // eslint-disable-next-line @typescript-eslint/comma-dangle
     } | null,
   );
-  const owner = (session && session.user && session.user.email) || '';
+
+  // Redirect to home page
+  redirect('/');
+
+  const owner = session?.user?.email || '';
   const stuff = await prisma.stuff.findMany({
     where: {
       owner,
     },
   });
-  // console.log(stuff);
+
   return (
     <main>
       <Container id="list" fluid className="py-3">

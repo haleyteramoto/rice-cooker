@@ -4,12 +4,12 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Col, Container, Row, Form, Button, Card } from 'react-bootstrap';
 
-/** Home page */
+/** home page */
 const HomePage = () => {
   const router = useRouter();
   const [searchType, setSearchType] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState<any[]>([]); // Added state for search results
+  const [recipes, setRecipes] = useState<any[]>([]); // state for storing recipes
 
   const handleSearchTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSearchType(e.target.value);
@@ -27,15 +27,18 @@ const HomePage = () => {
     try {
       const response = await fetch(`/api/search?type=${searchType}&query=${searchQuery}`);
       if (!response.ok) throw new Error('Failed to fetch recipes');
-      const recipes = await response.json();
-      if (recipes.length === 0) {
+      const recipesData = await response.json();
+      if (recipesData.length === 0) {
         alert('No recipes found.');
       } else {
-        setSearchResults(recipes); // Update the search results state
+        setRecipes(recipesData); // set recipes data to state
       }
-    } catch (error: any) {
-      console.error(error.message);
-      alert('An error occurred while searching for recipes.');
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error(error.message); // Safe to access 'message' since it's an Error object
+      } else {
+        console.error('An unknown error occurred');
+      }
     }
   };
 
@@ -53,6 +56,7 @@ const HomePage = () => {
           color: '#fff',
         }}
       >
+
         <Container>
           <Row className="justify-content-center">
             <Col xs={12}>
@@ -74,7 +78,6 @@ const HomePage = () => {
                   <Form.Group controlId="searchQuery" className="mb-3">
                     <Form.Label>
                       Enter your
-                      {' '}
                       {searchType}
                       :
                     </Form.Label>
@@ -95,44 +98,7 @@ const HomePage = () => {
         </Container>
       </Container>
 
-      {/* Search Results Section */}
-      {searchResults.length > 0 && (
-        <Container id="search-results" fluid className="py-5">
-          <Container>
-            <Row className="text-center mb-4">
-              <Col xs={12}>
-                <h2>Search Results</h2>
-                <h5>
-                  Found
-                  {searchResults.length}
-                  {' '}
-                  recipes
-                </h5>
-              </Col>
-            </Row>
-            <Row className="g-4">
-              {recipes.map((recipe) => (
-                <Col key={recipe.id} md={4}>
-                  <Card>
-                    <Card.Img variant="top" src={recipe.imageUrl} alt={recipe.title} />
-                    <Card.Body>
-                      <Card.Title>{recipe.title}</Card.Title>
-                      <Card.Text>
-                        {recipe.description}
-                      </Card.Text>
-                      <Button variant="dark" onClick={() => router.push(`/recipes/${recipe.slug}`)}>
-                        View Recipe
-                      </Button>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              ))}
-            </Row>
-          </Container>
-        </Container>
-      )}
-
-      {/* Popular recipes section */}
+      {/* popular recipes section */}
       <Container id="popular-recipes" fluid className="py-5">
         <Container>
           <Row className="text-center mb-4">
@@ -142,43 +108,23 @@ const HomePage = () => {
             </Col>
           </Row>
           <Row className="g-4">
-            {/* example recipe cards */}
-            <Col md={4}>
-              <Card>
-                <Card.Img variant="top" src="/path-to-recipe-image1.jpg" alt="Recipe 1" />
-                <Card.Body>
-                  <Card.Title>Hearty Chicken Stew</Card.Title>
-                  <Card.Text>
-                    A comforting one-pot chicken stew packed with vegetables and flavor.
-                  </Card.Text>
-                  <Button variant="dark" onClick={() => router.push('/recipes/chicken-stew')}>View Recipe</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card>
-                <Card.Img variant="top" src="/path-to-recipe-image2.jpg" alt="Recipe 2" />
-                <Card.Body>
-                  <Card.Title>Vegetarian Fried Rice</Card.Title>
-                  <Card.Text>
-                    Quick and easy fried rice with a medley of fresh vegetables.
-                  </Card.Text>
-                  <Button variant="dark" onClick={() => router.push('/recipes/fried-rice')}>View Recipe</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card>
-                <Card.Img variant="top" src="/path-to-recipe-image3.jpg" alt="Recipe 3" />
-                <Card.Body>
-                  <Card.Title>Classic Beef Chili</Card.Title>
-                  <Card.Text>
-                    A hearty chili recipe with ground beef, beans, and spices.
-                  </Card.Text>
-                  <Button variant="dark" onClick={() => router.push('/recipes/beef-chili')}>View Recipe</Button>
-                </Card.Body>
-              </Card>
-            </Col>
+            {/* Render recipes dynamically */}
+            {recipes.map((recipe) => (
+              <Col key={recipe.id} md={4}>
+                <Card>
+                  <Card.Img variant="top" src={recipe.imageUrl} alt={recipe.title} />
+                  <Card.Body>
+                    <Card.Title>{recipe.title}</Card.Title>
+                    <Card.Text>
+                      {recipe.description}
+                    </Card.Text>
+                    <Button variant="dark" onClick={() => router.push(`/recipes/${recipe.slug}`)}>
+                      View Recipe
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
           </Row>
         </Container>
       </Container>

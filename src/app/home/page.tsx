@@ -4,11 +4,12 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Col, Container, Row, Form, Button, Card } from 'react-bootstrap';
 
-/** home page */
+/** Home page */
 const HomePage = () => {
   const router = useRouter();
   const [searchType, setSearchType] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState<any[]>([]); // Added state for search results
 
   const handleSearchTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSearchType(e.target.value);
@@ -18,9 +19,24 @@ const HomePage = () => {
     setSearchQuery(e.target.value);
   };
 
-  const handleSearch = () => {
-    // implement search functionality
-    alert(`Searching ${searchType} for: ${searchQuery}`);
+  const handleSearch = async () => {
+    if (!searchType || !searchQuery) {
+      alert('Please select a search type and enter a query.');
+      return;
+    }
+    try {
+      const response = await fetch(`/api/search?type=${searchType}&query=${searchQuery}`);
+      if (!response.ok) throw new Error('Failed to fetch recipes');
+      const recipes = await response.json();
+      if (recipes.length === 0) {
+        alert('No recipes found.');
+      } else {
+        setSearchResults(recipes); // Update the search results state
+      }
+    } catch (error: any) {
+      console.error(error.message);
+      alert('An error occurred while searching for recipes.');
+    }
   };
 
   return (
@@ -37,7 +53,6 @@ const HomePage = () => {
           color: '#fff',
         }}
       >
-
         <Container>
           <Row className="justify-content-center">
             <Col xs={12}>
@@ -59,6 +74,7 @@ const HomePage = () => {
                   <Form.Group controlId="searchQuery" className="mb-3">
                     <Form.Label>
                       Enter your
+                      {' '}
                       {searchType}
                       :
                     </Form.Label>
@@ -79,7 +95,44 @@ const HomePage = () => {
         </Container>
       </Container>
 
-      {/* popular recipes section */}
+      {/* Search Results Section */}
+      {searchResults.length > 0 && (
+        <Container id="search-results" fluid className="py-5">
+          <Container>
+            <Row className="text-center mb-4">
+              <Col xs={12}>
+                <h2>Search Results</h2>
+                <h5>
+                  Found
+                  {searchResults.length}
+                  {' '}
+                  recipes
+                </h5>
+              </Col>
+            </Row>
+            <Row className="g-4">
+              {recipes.map((recipe) => (
+                <Col key={recipe.id} md={4}>
+                  <Card>
+                    <Card.Img variant="top" src={recipe.imageUrl} alt={recipe.title} />
+                    <Card.Body>
+                      <Card.Title>{recipe.title}</Card.Title>
+                      <Card.Text>
+                        {recipe.description}
+                      </Card.Text>
+                      <Button variant="dark" onClick={() => router.push(`/recipes/${recipe.slug}`)}>
+                        View Recipe
+                      </Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </Container>
+        </Container>
+      )}
+
+      {/* Popular recipes section */}
       <Container id="popular-recipes" fluid className="py-5">
         <Container>
           <Row className="text-center mb-4">

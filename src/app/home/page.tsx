@@ -39,6 +39,7 @@ const HomePage = () => {
   const router = useRouter();
   const [searchType, setSearchType] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
+  const [recipes, setRecipes] = useState<any[]>([]); // state for storing recipes
 
   const handleSearchTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSearchType(e.target.value);
@@ -49,16 +50,30 @@ const HomePage = () => {
     setSearchQuery(e.target.value);
   };
 
-  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Prevent form from submitting normally
 
-    if (!searchType || !searchQuery) return;
+    if (!searchType || !searchQuery) {
+      alert('Please select a search type and enter a query.');
+      return;
+    }
 
-    const searchParams = new URLSearchParams();
-    searchParams.append('type', searchType);
-    searchParams.append('query', searchQuery);
-
-    router.push(`/recipes/search?${searchParams.toString()}`);
+    try {
+      const response = await fetch(`/api/search?type=${searchType}&query=${searchQuery}`);
+      if (!response.ok) throw new Error('Failed to fetch recipes');
+      const recipesData = await response.json();
+      if (recipesData.length === 0) {
+        alert('No recipes found.');
+      } else {
+        setRecipes(recipesData); // set recipes data to state
+      }
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error(error.message); // Safe to access 'message' since it's an Error object
+      } else {
+        console.error('An unknown error occurred');
+      }
+    }
   };
 
   return (
@@ -155,10 +170,7 @@ const HomePage = () => {
                     <Card.Text>{recipe.description}</Card.Text>
                     <div className="mb-3">
                       <small className="text-muted">
-                        {recipe.cuisine}
-                        {' '}
-                        •
-                        {recipe.cookTime}
+                        {recipe.cuisine} • {recipe.cookTime}
                       </small>
                       <br />
                       <small className="text-muted">

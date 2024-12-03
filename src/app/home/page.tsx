@@ -50,7 +50,7 @@ const HomePage = () => {
     setSearchQuery(e.target.value);
   };
 
-const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Prevent form from submitting normally
 
     if (!searchType || !searchQuery) {
@@ -154,7 +154,7 @@ const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
             </Col>
           </Row>
           <Row className="g-4">
-            {popularRecipes.map((recipe) => (
+            {(recipes.length > 0 ? recipes : popularRecipes).map((recipe) => (
               <Col key={recipe.slug} xs={12} md={4}>
                 <Card className="h-100 shadow-sm">
                   <div style={{ position: 'relative', height: '200px' }}>
@@ -170,7 +170,11 @@ const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
                     <Card.Text>{recipe.description}</Card.Text>
                     <div className="mb-3">
                       <small className="text-muted">
-                        {recipe.cuisine} • {recipe.cookTime}
+                        {recipe.cuisine}
+                        {' '}
+                        •
+                        {' '}
+                        {recipe.cookTime}
                       </small>
                       <br />
                       <small className="text-muted">

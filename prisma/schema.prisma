@@ -51,3 +51,14 @@ model Vendor {
   image       String
   website     String
 }
+
+model Recipe {
+  id          Int    @id @default(autoincrement())
+  name        String
+  author      String
+  tags        String
+  image       String
+  serving     String
+  ingredients String
+  directions String
+}

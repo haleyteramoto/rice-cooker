@@ -21,3 +21,13 @@ export interface Vendor {
   image: string;
   website: string;
 }
+
+export interface Recipe {
+  name: string;
+  author: string;
+  tags: string[];
+  image: string;
+  serving: number;
+  ingredients: string[];
+  directions: string[];
+}

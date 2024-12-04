@@ -21,3 +21,15 @@ export interface Vendor {
   image: string;
   website: string;
 }
+
+export interface Recipe {
+  title: string;
+  description: string;
+  ingredients: string;
+  cuisine: string;
+  dietary: string;
+  imageUrl: string;
+  link: string;
+  createdAt: Date;
+  updatedAt: Date;
+}

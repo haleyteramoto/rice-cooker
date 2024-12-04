@@ -29,7 +29,13 @@ const NavBar: React.FC = () => {
             <Nav className="mx-auto justify-content-center">
             {currentUser
               ? [
-                <Nav.Link id="add-stuff-nav" href="/add" key="add" active={pathName === '/add'} className="mx-4">
+                <Nav.Link
+                  id="list-recipes-nav"
+                  href="/recipes"
+                  key="list"
+                  active={pathName === '/recipes'}
+                  className="mx-4"
+                >
                 Recipes
                 </Nav.Link>,
                 <Nav.Link

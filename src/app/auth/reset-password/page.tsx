@@ -1,37 +1,70 @@
+// src/app/auth/reset-password/page.tsx
+
 'use client';
 
-import React from 'react';
-import { signIn } from 'next-auth/react';
-import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
+import { useState } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
+import { Card, Col, Container, Button, Form, Row } from 'react-bootstrap';
+import swal from 'sweetalert';
 
-/** The sign in page. */
-const SignIn = () => {
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const target = e.target as typeof e.target & {
-      email: { value: string };
-      password: { value: string };
-    };
-    const email = target.email.value;
-    const password = target.password.value;
+type ResetPasswordForm = {
+  password: string;
+  confirmPassword: string;
+};
 
-    // Attempt to sign in
-    const result = await signIn('credentials', {
-      callbackUrl: '/home',
-      redirect: false, // Prevent automatic redirect after login
-      email,
-      password,
+const ResetPassword = () => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const token = searchParams.get('token');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validationSchema = Yup.object().shape({
+    password: Yup.string()
+      .required('Password is required')
+      .min(6, 'Password must be at least 6 characters')
+      .max(40, 'Password must not exceed 40 characters'),
+    confirmPassword: Yup.string()
+      .required('Confirm Password is required')
+      .oneOf([Yup.ref('password'), ''], 'Confirm Password does not match'),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ResetPasswordForm>({
+    resolver: yupResolver(validationSchema),
+  });
+
+  const onSubmit = async (data: ResetPasswordForm) => {
+    if (!token) {
+      swal('Error', 'Invalid or missing token.', 'error');
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const response = await fetch('/api/auth/reset-password', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ token, password: data.password }),
     });
 
-    // If the result has an error, log it and show an alert
-    if (result?.error) {
-      console.error('Sign in failed: ', result.error);
-      // eslint-disable-next-line no-alert
-      alert(`Error: ${result.error}`); // Display error in alert (or use a custom UI for errors)
+    if (response.ok) {
+      swal('Success', 'Your password has been reset.', 'success').then(() => {
+        router.push('/auth/signin');
+      });
     } else {
-      // Redirect to another page upon successful login
-      window.location.href = '/list'; // or use router.push('/list') for client-side routing
+      const result = await response.json();
+      swal('Error', result.error || 'Failed to reset password.', 'error');
     }
+
+    setIsSubmitting(false);
+    reset();
   };
 
   return (
@@ -58,7 +91,7 @@ const SignIn = () => {
       <div
         className="login-wrapper position-relative"
         style={{
-          backgroundImage: 'url(/signinpic.jpg)',
+          backgroundImage: 'url(/signinpic.jpg)', // Use the same background image as sign in
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -81,8 +114,7 @@ const SignIn = () => {
         >
           {[...Array(10)].map((_, i) => (
             <div
-              // eslint-disable-next-line react/no-array-index-key
-              key={`shape-${i}`}
+              key={`shape-${Math.random().toString(36).substr(2, 9)}`}
               className="shape"
               style={{
                 position: 'absolute',
@@ -119,45 +151,40 @@ const SignIn = () => {
                         marginBottom: '10px',
                       }}
                     >
-                      Welcome Back!
+                      Forgot Your Password?
                     </h2>
-                    <p className="text-muted">Sign in to continue to your account</p>
+                    <p className="text-muted">Enter new password below</p>
                   </div>
 
-                  <Form method="post" onSubmit={handleSubmit}>
-                    <Form.Group className="mb-4" controlId="formBasicEmail">
-                      <Form.Label className="text-dark">Email</Form.Label>
+                  <Form onSubmit={handleSubmit(onSubmit)}>
+                    <Form.Group className="mb-4">
+                      <Form.Label className="text-dark">New Password</Form.Label>
                       <input
-                        name="email"
-                        type="text"
+                        type="password"
+                        {...register('password')}
                         className="form-control form-control-lg"
-                        placeholder="Enter your email"
                         style={{
                           borderRadius: '10px',
                           background: 'rgba(255,255,255,0.7)',
                           border: '1px solid rgba(0,0,0,0.1)',
                         }}
                       />
+                      <div className="invalid-feedback">{errors.password?.message}</div>
                     </Form.Group>
 
-                    <Form.Group className="mb-3">
-                      <Form.Label className="text-dark">Password</Form.Label>
+                    <Form.Group className="mb-4">
+                      <Form.Label className="text-dark">Confirm Password</Form.Label>
                       <input
-                        name="password"
                         type="password"
+                        {...register('confirmPassword')}
                         className="form-control form-control-lg"
-                        placeholder="Enter your password"
                         style={{
                           borderRadius: '10px',
                           background: 'rgba(255,255,255,0.7)',
                           border: '1px solid rgba(0,0,0,0.1)',
                         }}
                       />
-                      <div className="text-end mt-2">
-                        <a href="/auth/reset-password" className="text-success small">
-                          Forgot Password?
-                        </a>
-                      </div>
+                      <div className="invalid-feedback">{errors.confirmPassword?.message}</div>
                     </Form.Group>
 
                     <Button
@@ -171,6 +198,7 @@ const SignIn = () => {
                         fontWeight: 600,
                         transition: 'transform 0.3s ease',
                       }}
+                      disabled={isSubmitting}
                       onMouseOver={(e) => {
                         e.currentTarget.style.transform = 'scale(1.05)';
                       }}
@@ -178,16 +206,16 @@ const SignIn = () => {
                         e.currentTarget.style.transform = 'scale(1)';
                       }}
                     >
-                      Sign In
+                      {isSubmitting ? 'Resetting...' : 'Reset Password'}
                     </Button>
                   </Form>
 
                   <div className="text-center mt-4">
                     <p className="text-muted">
-                      Don&apos;t have an account?
+                      Remembered your password?
                       {' '}
-                      <a href="/auth/signup" className="text-success">
-                        Sign Up
+                      <a href="/auth/signin" className="text-success">
+                        Sign In
                       </a>
                     </p>
                   </div>
@@ -201,4 +229,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default ResetPassword;

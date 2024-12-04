@@ -1,4 +1,4 @@
-name: ci-nextjs-application-template
+name: rice-cooker-recipes
 on:
   push:
     branches: [main, master]

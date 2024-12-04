@@ -13,7 +13,6 @@ type ChangePasswordForm = {
   oldpassword: string;
   password: string;
   confirmPassword: string;
-  // acceptTerms: boolean;
 };
 
 /** The change password page. */
@@ -41,7 +40,6 @@ const ChangePassword = () => {
   });
 
   const onSubmit = async (data: ChangePasswordForm) => {
-    // console.log(JSON.stringify(data, null, 2));
     await changePassword({ email, ...data });
     await swal('Password Changed', 'Your password has been changed', 'success', { timer: 2000 });
     reset();
@@ -52,63 +50,136 @@ const ChangePassword = () => {
   }
 
   return (
-    <main>
-      <Container>
+    <div
+      className="change-password-wrapper position-relative"
+      style={{
+        backgroundImage: 'url(/signinpic.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden',
+      }}
+    >
+      {/* Decorative Floating Shapes */}
+      <div
+        className="background-shapes position-absolute"
+        style={{
+          zIndex: 0,
+          width: '100%',
+          height: '100%',
+          overflow: 'hidden',
+        }}
+      >
+        {[...Array(10)].map((_, i) => (
+          <div
+            key={`shape-${Math.random().toString(36).substr(2, 9)}`}
+            className="shape"
+            style={{
+              position: 'absolute',
+              borderRadius: '50%',
+              background: 'rgba(255,255,255,0.1)',
+              animation: `float${i % 3} ${5 + i}s infinite ease-in-out`,
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: `${50 + Math.random() * 200}px`,
+              height: `${50 + Math.random() * 200}px`,
+            }}
+          />
+        ))}
+      </div>
+
+      <Container className="position-relative" style={{ zIndex: 10 }}>
         <Row className="justify-content-center">
-          <Col xs={5}>
-            <h1 className="text-center">Change Password</h1>
-            <Card>
-              <Card.Body>
+          <Col xs={12} md={5}>
+            <Card
+              className="shadow-lg border-0"
+              style={{
+                borderRadius: '20px',
+                background: 'rgba(255,255,255,0.9)',
+                backdropFilter: 'blur(10px)',
+              }}
+            >
+              <Card.Body className="p-5">
+                <div className="text-center mb-4">
+                  <h2 className="text-dark" style={{ fontWeight: 700, color: '#628473' }}>
+                    Change Password
+                  </h2>
+                  <p className="text-muted">Update your account credentials</p>
+                </div>
+
                 <Form onSubmit={handleSubmit(onSubmit)}>
-                  <Form.Group className="form-group">
-                    <Form.Label>Old Passord</Form.Label>
+                  <Form.Group className="mb-4">
+                    <Form.Label className="text-dark">Old Password</Form.Label>
                     <input
                       type="password"
                       {...register('oldpassword')}
-                      className={`form-control ${errors.oldpassword ? 'is-invalid' : ''}`}
+                      className={`form-control form-control-lg ${errors.oldpassword ? 'is-invalid' : ''}`}
+                      placeholder="Enter your old password"
+                      style={{
+                        borderRadius: '10px',
+                        background: 'rgba(255,255,255,0.7)',
+                        border: '1px solid rgba(0,0,0,0.1)',
+                      }}
                     />
                     <div className="invalid-feedback">{errors.oldpassword?.message}</div>
                   </Form.Group>
 
-                  <Form.Group className="form-group">
-                    <Form.Label>New Password</Form.Label>
+                  <Form.Group className="mb-4">
+                    <Form.Label className="text-dark">New Password</Form.Label>
                     <input
                       type="password"
                       {...register('password')}
-                      className={`form-control ${errors.password ? 'is-invalid' : ''}`}
+                      className={`form-control form-control-lg ${errors.password ? 'is-invalid' : ''}`}
+                      placeholder="Enter your new password"
+                      style={{
+                        borderRadius: '10px',
+                        background: 'rgba(255,255,255,0.7)',
+                        border: '1px solid rgba(0,0,0,0.1)',
+                      }}
                     />
                     <div className="invalid-feedback">{errors.password?.message}</div>
                   </Form.Group>
-                  <Form.Group className="form-group">
-                    <Form.Label>Confirm Password</Form.Label>
+
+                  <Form.Group className="mb-4">
+                    <Form.Label className="text-dark">Confirm Password</Form.Label>
                     <input
                       type="password"
                       {...register('confirmPassword')}
-                      className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`}
+                      className={`form-control form-control-lg ${errors.confirmPassword ? 'is-invalid' : ''}`}
+                      placeholder="Confirm your new password"
+                      style={{
+                        borderRadius: '10px',
+                        background: 'rgba(255,255,255,0.7)',
+                        border: '1px solid rgba(0,0,0,0.1)',
+                      }}
                     />
                     <div className="invalid-feedback">{errors.confirmPassword?.message}</div>
                   </Form.Group>
-                  <Form.Group className="form-group py-3">
-                    <Row>
-                      <Col>
-                        <Button type="submit" className="btn btn-primary">
-                          Change
-                        </Button>
-                      </Col>
-                      <Col>
-                        <Button type="button" onClick={() => reset()} className="btn btn-warning float-right">
-                          Reset
-                        </Button>
-                      </Col>
-                    </Row>
-                  </Form.Group>
+
+                  <Button
+                    type="submit"
+                    className="w-100"
+                    style={{
+                      background: '#628473',
+                      border: 'none',
+                      padding: '12px',
+                      borderRadius: '10px',
+                      fontWeight: 600,
+                    }}
+                  >
+                    Change Password
+                  </Button>
                 </Form>
               </Card.Body>
             </Card>
           </Col>
         </Row>
       </Container>
-    </main>
+    </div>
   );
 };
 

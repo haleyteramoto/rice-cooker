@@ -5,12 +5,13 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const prisma = new PrismaClient();
 
-const handler = NextAuth(authOptions);
+// NextAuth handler for authentication
+const authHandler = NextAuth(authOptions);
 
-// Handle GET requests
+// Custom handler for search functionality
 async function handleSearch(req: NextRequest) {
   const { searchParams } = req.nextUrl;
-  const query = searchParams.get('q');
+  const query = searchParams.get('q'); // Extract query parameter
 
   if (!query) {
     return NextResponse.json({ message: 'No query provided' }, { status: 400 });
@@ -28,6 +29,7 @@ async function handleSearch(req: NextRequest) {
 
     return NextResponse.json(results);
   } catch (error: unknown) {
+    // Handle error safely
     if (error instanceof Error) {
       return NextResponse.json(
         { message: 'Error searching for items', error: error.message },
@@ -41,13 +43,28 @@ async function handleSearch(req: NextRequest) {
   }
 }
 
+// Main GET handler: Route requests to the appropriate functionality
 export async function GET(req: NextRequest) {
-  if (req.nextUrl.pathname === '/api/search') {
-    return handleSearch(req);
+  const { pathname } = req.nextUrl;
+
+  if (pathname === '/api/search') {
+    return handleSearch(req); // Delegate to search logic
   }
-  return handler(req);
+
+  if (pathname.startsWith('/api/auth')) {
+    return authHandler(req); // Delegate to NextAuth
+  }
+
+  return NextResponse.json({ message: 'Endpoint not found' }, { status: 404 });
 }
 
+// Main POST handler: Forward requests to NextAuth
 export async function POST(req: NextRequest) {
-  return handler(req);
+  const { pathname } = req.nextUrl;
+
+  if (pathname.startsWith('/api/auth')) {
+    return authHandler(req);
+  }
+
+  return NextResponse.json({ message: 'POST not supported for this endpoint' }, { status: 405 });
 }

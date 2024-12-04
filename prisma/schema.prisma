@@ -53,7 +53,7 @@ model Vendor {
 }
 
 model Recipe {
-  id          Int    @id @default(autoincrement())
+  id          Int      @id @default(autoincrement())
   title       String   @unique
   description String
   ingredients String

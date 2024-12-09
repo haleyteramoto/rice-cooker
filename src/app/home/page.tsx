@@ -5,36 +5,6 @@ import { useRouter } from 'next/navigation';
 import { Col, Container, Row, Form, Button, Card } from 'react-bootstrap';
 import Image from 'next/image';
 
-const popularRecipes = [
-  {
-    title: 'Hearty Chicken Stew',
-    description: 'A comforting one-pot chicken stew packed with vegetables and flavor.',
-    image: '/Chicken Stew.jpeg',
-    cuisine: 'American',
-    cookTime: '45 minutes',
-    slug: 'chicken-stew',
-    dietaryPreferences: ['High-Protein', 'Dairy-Free'],
-  },
-  {
-    title: 'Vegetarian Fried Rice',
-    description: 'Quick and easy fried rice with a medley of fresh vegetables.',
-    image: '/Vegetarian Fried Rice.jpg',
-    cuisine: 'Asian',
-    cookTime: '20 minutes',
-    slug: 'fried-rice',
-    dietaryPreferences: ['Vegetarian', 'Dairy-Free'],
-  },
-  {
-    title: 'Classic Beef Chili',
-    description: 'A hearty chili recipe with ground beef, beans, and spices.',
-    image: '/Beef Chili.jpg',
-    cuisine: 'Mexican',
-    cookTime: '60 minutes',
-    slug: 'beef-chili',
-    dietaryPreferences: ['High-Protein'],
-  },
-];
-
 const HomePage = () => {
   const router = useRouter();
   const [searchType, setSearchType] = useState('');
@@ -149,17 +119,17 @@ const HomePage = () => {
         <Container>
           <Row className="text-center mb-4">
             <Col xs={12}>
-              <h2>Popular Recipes</h2>
-              <p className="lead">Explore some of our community&apos;s favorite recipes</p>
+              <h2>Recipes</h2>
+              <p className="lead">Explore some of the recipes based on your search</p>
             </Col>
           </Row>
           <Row className="g-4">
-            {(recipes.length > 0 ? recipes : popularRecipes).map((recipe) => (
-              <Col key={recipe.slug} xs={12} md={4}>
+            {(recipes.length > 0 ? recipes : []).map((recipe) => (
+              <Col key={recipe.id} xs={12} md={4}>
                 <Card className="h-100 shadow-sm">
                   <div style={{ position: 'relative', height: '200px' }}>
                     <Image
-                      src={recipe.image}
+                      src={recipe.imageUrl}
                       alt={recipe.title}
                       fill
                       style={{ objectFit: 'cover' }}
@@ -174,16 +144,12 @@ const HomePage = () => {
                         {' '}
                         •
                         {' '}
-                        {recipe.cookTime}
-                      </small>
-                      <br />
-                      <small className="text-muted">
-                        {recipe.dietaryPreferences.join(', ')}
+                        {recipe.dietary}
                       </small>
                     </div>
                     <Button
                       variant="dark"
-                      onClick={() => router.push(`/recipes/${recipe.slug}`)}
+                      onClick={() => router.push(`/recipes/${recipe.id}`)}
                     >
                       View Recipe
                     </Button>

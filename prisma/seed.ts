@@ -53,6 +53,25 @@ async function main() {
     }),
   );
 
+  await Promise.all(
+    config.defaultRecipes.map(async (recipe) => {
+      console.log(`  Adding recipe: ${recipe.title}`);
+      await prisma.recipe.upsert({
+        where: { title: recipe.title },
+        update: {},
+        create: {
+          title: recipe.title,
+          description: recipe.description,
+          ingredients: recipe.ingredients,
+          cuisine: recipe.cuisine,
+          dietary: recipe.dietary,
+          imageUrl: recipe.imageUrl,
+          link: recipe.link,
+        },
+      });
+    }),
+  );
+
   // Seed Recipes
   const recipeData = [
     {

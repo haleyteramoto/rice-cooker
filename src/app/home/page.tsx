@@ -28,11 +28,17 @@ const HomePage = () => {
 
     try {
       const response = await fetch(`/api/search?type=${searchType}&query=${searchQuery}`);
-      if (!response.ok) throw new Error('Failed to fetch recipes');
-      const recipesData = await response.json();
-      setRecipes(recipesData); // Update state with fetched recipes
+      if (response.status === 404) {
+        setRecipes([]);
+      } else if (!response.ok) {
+        throw new Error('Failed to fetch recipes');
+      } else {
+        const recipesData = await response.json();
+        setRecipes(recipesData);
+      }
     } catch (error: unknown) {
       console.error(error instanceof Error ? error.message : 'An unknown error occurred');
+      alert('Something went wrong. Please try again later.');
     }
   };
 

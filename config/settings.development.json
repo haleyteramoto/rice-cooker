@@ -13,7 +13,7 @@
 
   "defaultRecipes": [
       {
-        "title": "Rice Cooker Fried Rice",
+        "title": "Fried Rice",
         "description": "Cook rice in rice cooker. Add vegetables, soy sauce, and cooked chicken. Stir in scrambled eggs.",
         "ingredients": "Rice, Vegetables, Soy Sauce, Eggs, Chicken",
         "cuisine": "Asian",
@@ -24,7 +24,7 @@
         "updatedAt": "2023-10-01T00:00:00Z"
       },
       {
-        "title": "Rice Cooker Risotto",
+        "title": "Risotto",
         "description": "Cook onions and mushrooms in rice cooker. Add rice and broth. Cook until creamy. Stir in cheese.",
         "ingredients": "Arborio Rice, Chicken Broth, Parmesan Cheese, Mushrooms, Onions",
         "cuisine": "Italian",
@@ -35,7 +35,7 @@
         "updatedAt": "2023-10-01T00:00:00Z"
       },
       {
-        "title": "Rice Cooker Jambalaya",
+        "title": "Jambalaya",
         "description": "Cook sausage and bell peppers in rice cooker. Add rice, tomatoes, shrimp, and seasoning. Cook until done.",
         "ingredients": "Rice, Sausage, Shrimp, Bell Peppers, Tomatoes, Cajun Seasoning",
         "cuisine": "Cajun",
@@ -46,7 +46,7 @@
         "updatedAt": "2023-10-01T00:00:00Z"
       },
       {
-        "title": "Rice Cooker Sushi Rice",
+        "title": "Sushi Rice",
         "description": "Cook sushi rice in rice cooker. Mix vinegar, sugar, and salt. Stir into cooked rice.",
         "ingredients": "Sushi Rice, Rice Vinegar, Sugar, Salt",
         "cuisine": "Japanese",
@@ -57,7 +57,7 @@
         "updatedAt": "2023-10-01T00:00:00Z"
       },
       {
-        "title": "Rice Cooker Rice Pudding",
+        "title": "Rice Pudding",
         "description": "Cook rice in rice cooker with milk and sugar. Stir in cinnamon and raisins.",
         "ingredients": "Rice, Milk, Sugar, Cinnamon, Raisins",
         "cuisine": "Dessert",
@@ -68,7 +68,7 @@
         "updatedAt": "2023-10-01T00:00:00Z"
       },
       {
-        "title": "Rice Cooker Congee",
+        "title": "Congee",
         "description": "Cook rice in rice cooker with chicken broth and ginger. Top with green onions and soy sauce.",
         "ingredients": "Rice, Chicken Broth, Ginger, Green Onions, Soy Sauce",
         "cuisine": "Chinese",
@@ -78,5 +78,51 @@
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       }
+      ,
+      {
+        "title": "Quinoa",
+        "description": "Cook quinoa in rice cooker with vegetable broth. Fluff with fork and serve.",
+        "ingredients": "Quinoa, Vegetable Broth",
+        "cuisine": "Healthy",
+        "dietary": "Side Dish",
+        "imageUrl": "https://projectmealplan.com/wp-content/uploads/2017/01/how-to-make-quinoa-in-the-rice-cooker-5.jpg",
+        "link": "",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Lentils",
+        "description": "Cook lentils in rice cooker with onions, carrots, and celery. Season with salt and pepper.",
+        "ingredients": "Lentils, Onions, Carrots, Celery, Salt, Pepper",
+        "cuisine": "Healthy",
+        "dietary": "Main Course",
+        "imageUrl": "https://dailydish.co.uk/wp-content/uploads/2022/03/rice-cooker-lentils-water-ratio-500x375.jpg",
+        "link": "",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Chili",
+        "description": "Cook ground beef and onions in rice cooker. Add beans, tomatoes, and chili seasoning. Simmer until done.",
+        "ingredients": "Ground Beef, Onions, Beans, Tomatoes, Chili Seasoning",
+        "cuisine": "American",
+        "dietary": "Main Course",
+        "imageUrl": "https://www.budgetbytes.com/wp-content/uploads/2018/11/Rice-Cooker-Chili-spoon.jpg",
+        "link": "",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Mac and Cheese",
+        "description": "Cook macaroni in rice cooker. Stir in cheese, milk, and butter until creamy.",
+        "ingredients": "Macaroni, Cheese, Milk, Butter",
+        "cuisine": "American",
+        "dietary": "Main Course",
+        "imageUrl": "https://cravinghomecooked.com/wp-content/uploads/2023/09/crockpot-mac-and-cheese-1-9.jpg",
+        "link": "",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      }
+      
   ]
 }

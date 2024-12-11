@@ -1,15 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { Col, Container, Row, Form, Button, Card } from 'react-bootstrap';
-import Image from 'next/image';
+import { Col, Container, Row, Form, Button } from 'react-bootstrap';
+import RecipeCard from '@/components/RecipeCard';
 
 const HomePage = () => {
-  const router = useRouter();
   const [searchType, setSearchType] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
-  const [recipes, setRecipes] = useState<any[]>([]); // state for storing recipes
+  const [recipes, setRecipes] = useState<any[]>([]);
 
   const handleSearchTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSearchType(e.target.value);
@@ -21,7 +19,7 @@ const HomePage = () => {
   };
 
   const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Prevent form from submitting normally
+    e.preventDefault();
 
     if (!searchType || !searchQuery) {
       alert('Please select a search type and enter a query.');
@@ -32,23 +30,15 @@ const HomePage = () => {
       const response = await fetch(`/api/search?type=${searchType}&query=${searchQuery}`);
       if (!response.ok) throw new Error('Failed to fetch recipes');
       const recipesData = await response.json();
-      if (recipesData.length === 0) {
-        alert('No recipes found.');
-      } else {
-        setRecipes(recipesData); // set recipes data to state
-      }
+      setRecipes(recipesData); // Update state with fetched recipes
     } catch (error: unknown) {
-      if (error instanceof Error) {
-        console.error(error.message); // Safe to access 'message' since it's an Error object
-      } else {
-        console.error('An unknown error occurred');
-      }
+      console.error(error instanceof Error ? error.message : 'An unknown error occurred');
     }
   };
 
   return (
     <main>
-      {/* Header section with search */}
+      {/* Header Section */}
       <section
         className="py-5 text-center"
         style={{
@@ -114,7 +104,7 @@ const HomePage = () => {
         </Container>
       </section>
 
-      {/* Popular recipes section */}
+      {/* Recipes Section */}
       <section className="py-5 bg-light">
         <Container>
           <Row className="text-center mb-4">
@@ -123,40 +113,18 @@ const HomePage = () => {
               <p className="lead">Explore some of the recipes based on your search</p>
             </Col>
           </Row>
-          <Row className="g-4">
-            {(recipes.length > 0 ? recipes : []).map((recipe) => (
-              <Col key={recipe.id} xs={12} md={4}>
-                <Card className="h-100 shadow-sm">
-                  <div style={{ position: 'relative', height: '200px' }}>
-                    <Image
-                      src={recipe.imageUrl}
-                      alt={recipe.title}
-                      fill
-                      style={{ objectFit: 'cover' }}
-                    />
-                  </div>
-                  <Card.Body>
-                    <Card.Title>{recipe.title}</Card.Title>
-                    <Card.Text>{recipe.description}</Card.Text>
-                    <div className="mb-3">
-                      <small className="text-muted">
-                        {recipe.cuisine}
-                        {' '}
-                        •
-                        {' '}
-                        {recipe.dietary}
-                      </small>
-                    </div>
-                    <Button
-                      variant="dark"
-                      onClick={() => router.push(`/recipes/${recipe.id}`)}
-                    >
-                      View Recipe
-                    </Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
+          <Row xs={1} md={2} lg={3} className="g-4">
+            {recipes.length > 0
+              ? recipes.map((recipe) => (
+                <Col key={recipe.id}>
+                  <RecipeCard recipe={recipe} />
+                </Col>
+              ))
+              : (
+                <Col>
+                  <p className="text-center">No recipes found. Please try a different search.</p>
+                </Col>
+              )}
           </Row>
         </Container>
       </section>

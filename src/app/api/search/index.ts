@@ -1,19 +1,18 @@
-import { getSession } from 'next-auth/react'; // Importing NextAuth's session function
+// /api/search/index.ts
+import { getServerSession } from 'next-auth';
 import { PrismaClient } from '@prisma/client';
 import { NextApiRequest, NextApiResponse } from 'next';
+import authOptions from '@/lib/authOptions';
 
 const prisma = new PrismaClient();
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const session = await getSession({ req }); // Get the session from the request
-
-  // Check if the user is authenticated
+  const session = await getServerSession(req, res, authOptions);
   if (!session) {
     return res.status(401).json({ error: 'You must be logged in to search for recipes.' });
   }
 
   const { type, query } = req.query;
-
   if (!type || !query) {
     return res.status(400).json({ error: 'Type and query parameters are required.' });
   }

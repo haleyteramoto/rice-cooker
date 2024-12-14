@@ -1,31 +1,29 @@
-// /api/search/index.ts
-import { getServerSession } from 'next-auth';
+/* eslint-disable import/prefer-default-export */
 import { PrismaClient } from '@prisma/client';
-import { NextApiRequest, NextApiResponse } from 'next';
-import authOptions from '@/lib/authOptions';
+import { NextRequest, NextResponse } from 'next/server';
 
 const prisma = new PrismaClient();
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const session = await getServerSession(req, res, authOptions);
-  if (!session) {
-    return res.status(401).json({ error: 'You must be logged in to search for recipes.' });
-  }
-
-  const { type, query } = req.query;
-  if (!type || !query) {
-    return res.status(400).json({ error: 'Type and query parameters are required.' });
-  }
-
+export async function GET(req: NextRequest) {
   try {
+    // Extract query parameters
+    const type = req.nextUrl.searchParams.get('type');
+    const query = req.nextUrl.searchParams.get('query');
+
+    // Check if both type and query are provided
+    if (!type || !query) {
+      return NextResponse.json({ error: 'Type and query parameters are required.' }, { status: 400 });
+    }
+
     let filteredRecipes;
 
+    // Handle different search types
     switch (type) {
       case 'ingredients':
         filteredRecipes = await prisma.recipe.findMany({
           where: {
             ingredients: {
-              contains: query.toString(),
+              contains: query,
               mode: 'insensitive',
             },
           },
@@ -36,7 +34,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         filteredRecipes = await prisma.recipe.findMany({
           where: {
             cuisine: {
-              contains: query.toString(),
+              contains: query,
               mode: 'insensitive',
             },
           },
@@ -47,7 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         filteredRecipes = await prisma.recipe.findMany({
           where: {
             dietary: {
-              contains: query.toString(),
+              contains: query,
               mode: 'insensitive',
             },
           },
@@ -55,13 +53,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         break;
 
       default:
-        return res.status(400).json({ error: 'Invalid search type.' });
+        return NextResponse.json({ error: 'Invalid search type.' }, { status: 400 });
     }
 
-    return res.status(200).json(filteredRecipes);
+    // Return the filtered recipes
+    return NextResponse.json(filteredRecipes);
   } catch (error) {
     console.error('Error fetching recipes:', error);
-    return res.status(500).json({ error: 'An error occurred while fetching recipes.' });
+    return NextResponse.json({ error: 'An error occurred while fetching recipes.' }, { status: 500 });
   } finally {
     await prisma.$disconnect();
   }

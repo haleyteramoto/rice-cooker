@@ -1,9 +1,17 @@
+import { getSession } from 'next-auth/react'; // Importing NextAuth's session function
 import { PrismaClient } from '@prisma/client';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const prisma = new PrismaClient();
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const session = await getSession({ req }); // Get the session from the request
+
+  // Check if the user is authenticated
+  if (!session) {
+    return res.status(401).json({ error: 'You must be logged in to search for recipes.' });
+  }
+
   const { type, query } = req.query;
 
   if (!type || !query) {
@@ -13,39 +21,42 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     let filteredRecipes;
 
-    if (type === 'ingredients') {
-      filteredRecipes = await prisma.recipe.findMany({
-        where: {
-          ingredients: {
-            contains: query.toString(),
-            mode: 'insensitive',
+    switch (type) {
+      case 'ingredients':
+        filteredRecipes = await prisma.recipe.findMany({
+          where: {
+            ingredients: {
+              contains: query.toString(),
+              mode: 'insensitive',
+            },
           },
-        },
-      });
-    } else if (type === 'cuisine') {
-      filteredRecipes = await prisma.recipe.findMany({
-        where: {
-          cuisine: {
-            contains: query.toString(),
-            mode: 'insensitive',
-          },
-        },
-      });
-    } else if (type === 'dietary') {
-      filteredRecipes = await prisma.recipe.findMany({
-        where: {
-          dietary: {
-            contains: query.toString(),
-            mode: 'insensitive',
-          },
-        },
-      });
-    } else {
-      return res.status(400).json({ error: 'Invalid search type.' });
-    }
+        });
+        break;
 
-    if (!filteredRecipes || filteredRecipes.length === 0) {
-      return res.status(404).json({ message: 'No recipes found.' });
+      case 'cuisine':
+        filteredRecipes = await prisma.recipe.findMany({
+          where: {
+            cuisine: {
+              contains: query.toString(),
+              mode: 'insensitive',
+            },
+          },
+        });
+        break;
+
+      case 'dietary':
+        filteredRecipes = await prisma.recipe.findMany({
+          where: {
+            dietary: {
+              contains: query.toString(),
+              mode: 'insensitive',
+            },
+          },
+        });
+        break;
+
+      default:
+        return res.status(400).json({ error: 'Invalid search type.' });
     }
 
     return res.status(200).json(filteredRecipes);

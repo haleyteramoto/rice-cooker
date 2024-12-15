@@ -122,6 +122,406 @@
         "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Black Sesame Rice",
+        "description": "Toast black sesame seeds in rice cooker on 'cook' setting for 2 minutes. Remove. Add rice and water, cook on normal setting. Mix in toasted sesame and salt.",
+        "ingredients": "Rice, Black Sesame Seeds, Water, Salt",
+        "cuisine": "Japanese",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://www.chopstickchronicles.com/wp-content/uploads/2022/05/Black-Sesame-Fried-Rice-2.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Rice Cooker Chocolate Cake",
+        "description": "Mix cake batter directly in rice cooker bowl. Line with parchment. Cook on normal setting for one cycle, check doneness. May need second cycle.",
+        "ingredients": "Cake Mix, Eggs, Oil, Water",
+        "cuisine": "Dessert",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://img.sndimg.com/food/image/upload/q_92,fl_progressive,w_1200,c_scale/v1/img/recipes/39/55/36/gKlrgBiCTnSvKfbBGwTQ_rice-cooker-cake-2.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Claypot-Style Chicken Rice",
+        "description": "Layer rice, marinated chicken pieces, mushrooms, and Chinese sausage in rice cooker. Cook on normal setting. Let steam 10 minutes after done.",
+        "ingredients": "Rice, Chicken, Chinese Mushrooms, Chinese Sausage, Soy Sauce, Ginger",
+        "cuisine": "Chinese",
+        "dietary": "Main Course",
+        "imageUrl": "https://makan.ch/wp-content/uploads/2015/08/claypotrice.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Farro with Herbs",
+        "description": "Combine farro with water in 1:3 ratio. Add herbs and garlic. Cook on brown rice setting. Fluff with olive oil.",
+        "ingredients": "Farro, Water, Mixed Herbs, Garlic, Olive Oil",
+        "cuisine": "Mediterranean",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2019/12/cooking-farro.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Rice Cooker Banana Bread",
+        "description": "Mix mashed bananas with bread batter. Line cooker with parchment. Cook on normal setting, may need 2-3 cycles until done.",
+        "ingredients": "Bananas, Flour, Eggs, Sugar, Butter",
+        "cuisine": "Dessert",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://amoderngirl.wordpress.com/wp-content/uploads/2012/11/img_32251.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Ginger Chicken and Rice",
+        "description": "Place rice, ginger-marinated chicken pieces, and water in cooker. Cook on normal setting. Top with scallions.",
+        "ingredients": "Rice, Chicken Thighs, Ginger, Soy Sauce, Scallions",
+        "cuisine": "Asian",
+        "dietary": "Main Course",
+        "imageUrl": "https://www.littlefiggy.com/wp-content/uploads/2017/01/Ginger-Chicken-Rice-Bowl-2-720x540.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Maple Cinnamon Breakfast Rice",
+        "description": "Cook brown rice with extra water on porridge setting. Stir in maple syrup, cinnamon, and butter. Top with nuts.",
+        "ingredients": "Brown Rice, Maple Syrup, Cinnamon, Butter, Mixed Nuts",
+        "cuisine": "Breakfast",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://i0.wp.com/wonkywonderful.com/wp-content/uploads/2013/06/Maple-Brown-Rice-Breakfast-Bowl-0.jpg?ssl=1",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Steamed Egg Custard",
+        "description": "Beat eggs with water and seasonings. Steam in bowl placed in rice cooker basket for 10-12 minutes.",
+        "ingredients": "Eggs, Water, Soy Sauce, Sesame Oil, Green Onions",
+        "cuisine": "Asian",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://thewoksoflife.com/wp-content/uploads/2024/06/steamed-egg-10.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Buckwheat Groats",
+        "description": "Toast buckwheat in rice cooker on 'cook' for 2 minutes. Add water and cook on normal setting. Fluff with butter.",
+        "ingredients": "Buckwheat Groats, Water, Butter, Salt",
+        "cuisine": "Eastern European",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://foodnheal.com/wp-content/uploads/2020/11/cooked-buckwheat-groats_.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Turmeric Rice with Peas",
+        "description": "Add rice, turmeric, and water to cooker. Place frozen peas in steamer basket. Cook on normal setting.",
+        "ingredients": "Rice, Turmeric, Frozen Peas, Water, Salt",
+        "cuisine": "Indian",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://ericasrecipes.com/wp-content/uploads/2014/01/Simple-Rice-with-Turmeric-and-Peas-4a.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Steam-Fried Tofu",
+        "description": "Place seasoned tofu pieces in steamer basket. Steam over rice as it cooks. Drizzle with sauce before serving.",
+        "ingredients": "Tofu, Rice, Soy Sauce, Sesame Oil, Garlic",
+        "cuisine": "Asian",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://thefoodietakesflight.com/wp-content/uploads/2022/01/Steamed-Tofu-with-Soy-Garlic-Sauce-2-of-3-500x375.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Barley Mushroom Bowl",
+        "description": "Combine pearl barley, mushrooms, and broth in rice cooker. Cook on brown rice setting. Stir in butter and herbs.",
+        "ingredients": "Pearl Barley, Mushrooms, Vegetable Broth, Butter, Herbs",
+        "cuisine": "European",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://www.budgetbytes.com/wp-content/uploads/2013/09/Baked-Barley-with-Mushrooms-bowl.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Pineapple Coconut Rice",
+        "description": "Cook rice with coconut milk and crushed pineapple. Use normal setting. Garnish with toasted coconut.",
+        "ingredients": "Rice, Coconut Milk, Crushed Pineapple, Toasted Coconut",
+        "cuisine": "Thai",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://thatwhichnourishes.com/wp-content/uploads/2016/05/coconut-rice-edited.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Sweet Potato & Kale Rice Bowl",
+        "description": "Layer rice and diced sweet potato in cooker. Cook on normal setting. Add sesame seeds and sauce.",
+        "ingredients": "Brown Rice, Sweet Potato, Kale, Sesame Seeds, Soy Sauce",
+        "cuisine": "Asian Fusion",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://www.eatingbirdfood.com/wp-content/uploads/2023/04/kale-and-sweet-potato-brown-rice-bowls-hero.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Mediterranean Couscous",
+        "description": "Add couscous and hot water to cooker. Let stand 5 minutes. Fluff and mix in olive oil and herbs.",
+        "ingredients": "Couscous, Water, Olive Oil, Mediterranean Herbs",
+        "cuisine": "Mediterranean",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://emilybites.com/wp-content/uploads/2022/07/Mediterranean-Couscous-Salad-5b.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Rice Cooker Hot Cocoa",
+        "description": "Heat milk in rice cooker on 'cook' setting. Whisk in cocoa powder and sugar. Keep warm until serving.",
+        "ingredients": "Milk, Cocoa Powder, Sugar, Vanilla Extract",
+        "cuisine": "Beverage",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://spoonuniversity.com/cdn-cgi/image/width=734,height=489.33333333333,fit=cover,format=auto/https://s3.amazonaws.com/secretsaucefiles/photos/images/000/136/003/large/Screenshot_%28123%29.png?1487791767",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Persian-Style Rice",
+        "description": "Cook rice with butter and saffron water. Allow bottom to crisp slightly. Serve tahdig side up.",
+        "ingredients": "Basmati Rice, Butter, Saffron, Salt",
+        "cuisine": "Persian",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://www.allrecipes.com/thmb/xjurj3TmYEQ5MMdq8s0mGMo4658=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/24606-persian-rice-mfs_149-04ba83bbdc4449f0a97767fff0172dfa.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Steamed Corn on Cob",
+        "description": "Add water to cooker. Place corn ears in steamer basket. Steam 10-12 minutes on normal setting.",
+        "ingredients": "Corn on Cob, Water, Butter, Salt",
+        "cuisine": "American",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://www.thespruceeats.com/thmb/fBQrP7Wcxy6IQaQECznT4zaI9tg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/steamed-corn-on-the-cob-2138219-hero-01-8ba7ab5f6a2f42338ea73e707228b15c.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Matcha Rice Pudding",
+        "description": "Cook rice with milk on porridge setting. Stir in matcha powder and honey when done.",
+        "ingredients": "Rice, Milk, Matcha Powder, Honey",
+        "cuisine": "Fusion",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://aiyamatcharecipes.com/images/recipes/image_matcha-rice-pudding_1676483504.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Black Bean Rice",
+        "description": "Cook rice with black beans and cumin. Use normal setting. Top with lime and cilantro.",
+        "ingredients": "Rice, Black Beans, Cumin, Lime, Cilantro",
+        "cuisine": "Mexican",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://beanrecipes.com/wp-content/uploads/2021/09/Black-Beans-and-Rice-7.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Steamed Mussels",
+        "description": "Add white wine and garlic to cooker. Place mussels in steamer basket. Steam until opened.",
+        "ingredients": "Mussels, White Wine, Garlic, Parsley",
+        "cuisine": "Mediterranean",
+        "dietary": "Seafood",
+        "imageUrl": "https://www.healthyseasonalrecipes.com/wp-content/uploads/2023/01/simple-steamed-mussels-with-garlic-sq-041-640x480.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Rice Cooker Applesauce",
+        "description": "Cook diced apples with water and cinnamon on porridge setting. Mash when soft.",
+        "ingredients": "Apples, Water, Cinnamon, Sugar",
+        "cuisine": "American",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFdh-9kwJOQ2ywo_Otzj79M0VS1we3jIQN3IuJ4i77NGsjLUwdmtfGuFhSo7FRxqPS0DR5quIcjevCQ0lojgwLacF9NToPSSt6pl8_FyFibSXML0azUACR43sAGgnURTlbCYINbW0Husiu/s1600/IMG_2608.JPG",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Amaranth Porridge",
+        "description": "Cook amaranth with water on porridge setting. Stir in fruit and nuts.",
+        "ingredients": "Amaranth, Water, Mixed Fruits, Nuts",
+        "cuisine": "Healthy",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://dishingupthedirt.com/wp-content/uploads/2021/03/amaranthporridge.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Saffron Rice with Dates",
+        "description": "Cook rice with saffron water and butter. Add chopped dates halfway through cooking.",
+        "ingredients": "Basmati Rice, Saffron, Dates, Butter",
+        "cuisine": "Middle Eastern",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://img.apmcdn.org/47c707c6542ec720f7956c088216232abdbf3730/widescreen/55203d-20210723-plenty-more-saffron-date-and-almond-rice-2000.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Peanut Rice",
+        "description": "Cook rice normally. Stir in peanut butter, soy sauce, and chopped peanuts at end.",
+        "ingredients": "Rice, Peanut Butter, Soy Sauce, Peanuts",
+        "cuisine": "Asian Fusion",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://www.indianhealthyrecipes.com/wp-content/uploads/2016/07/peanut-rice-1.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Carrot Cake Oatmeal",
+        "description": "Cook oats with grated carrots and spices. Add raisins and nuts after cooking.",
+        "ingredients": "Oats, Carrots, Cinnamon, Raisins, Nuts",
+        "cuisine": "Breakfast",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://ourbalancedbowl.com/wp-content/uploads/2021/03/IMG_6657.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Steamed Brussels Sprouts",
+        "description": "Steam brussels sprouts in basket over water. Season with garlic and lemon.",
+        "ingredients": "Brussels Sprouts, Garlic, Lemon, Olive Oil",
+        "cuisine": "European",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://itsavegworldafterall.com/wp-content/uploads/2023/01/Steamed-Brussels-Sprouts-FI.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Green Tea Rice",
+        "description": "Cook rice using green tea instead of water. Add a pinch of salt. Use normal setting.",
+        "ingredients": "Rice, Green Tea, Salt",
+        "cuisine": "Japanese",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://rasamalaysia.com/wp-content/uploads/2014/07/green_tea.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Rice Cooker Frittata",
+        "description": "Beat eggs with vegetables and seasonings. Cook in greased rice cooker bowl on normal setting until set.",
+        "ingredients": "Eggs, Mixed Vegetables, Cheese, Seasonings",
+        "cuisine": "Italian",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://justbento.com/files/bento/images/ricecookerfritatta-whole2.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Forbidden Black Rice",
+        "description": "Cook black rice with slightly more water than white rice. Use brown rice setting or two normal cycles.",
+        "ingredients": "Black Rice, Water, Salt",
+        "cuisine": "Chinese",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2021/01/black-rice-recipe.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Ginger Plum Rice",
+        "description": "Cook rice with fresh ginger. Mix in diced plums and honey at end of cooking. Add chicken.",
+        "ingredients": "Rice, Chicken, Fresh Ginger, Plums, Honey",
+        "cuisine": "Asian Fusion",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/ginger-plum-chicken-28699c8f.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Rice Cooker Poached Pears",
+        "description": "Place pears in steamer basket over spiced water. Steam until tender on normal setting.",
+        "ingredients": "Pears, Wine, Cinnamon, Sugar",
+        "cuisine": "Dessert",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://naturalkitchenschool.com/wp-content/uploads/poached-pears-720x720-1.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Herb-Infused Couscous",
+        "description": "Add couscous, herbs, and hot water to cooker. Let stand 5 minutes without heat.",
+        "ingredients": "Couscous, Fresh Herbs, Olive Oil, Lemon Zest",
+        "cuisine": "Mediterranean",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://meghanitup.com/wp-content/uploads/2023/03/Lemon-herb-couscous-4-3.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Red Bean Sweet Soup",
+        "description": "Cook red beans with water on porridge setting. Add rock sugar near end of cooking.",
+        "ingredients": "Red Beans, Water, Rock Sugar, Dried Orange Peel",
+        "cuisine": "Chinese",
+        "dietary": "Dessert",
+        "imageUrl": "https://nutsaboutgreens.com/wp-content/uploads/2016/02/IMG_8901-1.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Steamed Artichokes",
+        "description": "Place trimmed artichokes in steamer basket. Steam until leaves pull easily.",
+        "ingredients": "Artichokes, Lemon, Garlic, Water",
+        "cuisine": "Mediterranean",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://alwaysfromscratch.com/wp-content/uploads/2023/04/steamed-artichokes-34.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Five-Spice Rice",
+        "description": "Cook rice with Chinese five-spice powder and star anise. Remove spices before serving.",
+        "ingredients": "Rice, Five-Spice Powder, Star Anise, Water",
+        "cuisine": "Chinese",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://images.immediate.co.uk/production/volatile/sites/30/2023/05/One-Pot-Chinese-Five-Spice-Rice440x400-6ddd036.jpg?quality=90&resize=440,400",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Brown Rice Breakfast Bowl",
+        "description": "Cook brown rice on proper setting. Top with milk, honey, and fruit.",
+        "ingredients": "Brown Rice, Milk, Honey, Fresh Fruit",
+        "cuisine": "Breakfast",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://www.runningwithspoons.com/wp-content/uploads/2015/01/Brown-Rice-Breakfast-Bowl2.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Steamed Winter Squash",
+        "description": "Steam cubed squash in basket until tender. Season with butter and spices.",
+        "ingredients": "Winter Squash, Butter, Cinnamon, Brown Sugar",
+        "cuisine": "American",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://www.eatingwell.com/thmb/82KZhCjlk3SCIkm_zZYRLUHY1Jg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/EWL-262204-steamed-butternut-squash-hero-2744_preview_maxWidth_4000_maxHeight_4000_ppi_300_quality_100-1f05e2098dc94e15bb890be182f6e651.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Glutinous Rice with Red Beans",
+        "description": "Soak rice and beans overnight. Cook together on sweet rice setting if available, or normal setting.",
+        "ingredients": "Glutinous Rice, Red Beans, Water, Salt",
+        "cuisine": "Asian",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://bebeloveokazu.com/wp-content/uploads/2012/10/Osekihan-2.jpg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
+      },
+      {
+        "title": "Steamed New Potatoes",
+        "description": "Steam baby potatoes in basket. Toss with herbs and butter when done.",
+        "ingredients": "New Potatoes, Fresh Herbs, Butter, Salt",
+        "cuisine": "European",
+        "dietary": "Vegetarian",
+        "imageUrl": "https://img.taste.com.au/sG5A9m91/taste/2016/11/steamed-baby-potatoes-with-thyme-81602-1.jpeg",
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z"
       }
       
   ]

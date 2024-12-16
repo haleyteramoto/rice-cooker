@@ -130,6 +130,7 @@
         "cuisine": "Japanese",
         "dietary": "Vegetarian",
         "imageUrl": "https://www.chopstickchronicles.com/wp-content/uploads/2022/05/Black-Sesame-Fried-Rice-2.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -140,6 +141,7 @@
         "cuisine": "Dessert",
         "dietary": "Vegetarian",
         "imageUrl": "https://img.sndimg.com/food/image/upload/q_92,fl_progressive,w_1200,c_scale/v1/img/recipes/39/55/36/gKlrgBiCTnSvKfbBGwTQ_rice-cooker-cake-2.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -150,6 +152,7 @@
         "cuisine": "Chinese",
         "dietary": "Main Course",
         "imageUrl": "https://makan.ch/wp-content/uploads/2015/08/claypotrice.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -160,6 +163,7 @@
         "cuisine": "Mediterranean",
         "dietary": "Vegetarian",
         "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2019/12/cooking-farro.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -170,6 +174,7 @@
         "cuisine": "Dessert",
         "dietary": "Vegetarian",
         "imageUrl": "https://amoderngirl.wordpress.com/wp-content/uploads/2012/11/img_32251.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -180,6 +185,7 @@
         "cuisine": "Asian",
         "dietary": "Main Course",
         "imageUrl": "https://www.littlefiggy.com/wp-content/uploads/2017/01/Ginger-Chicken-Rice-Bowl-2-720x540.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -190,6 +196,7 @@
         "cuisine": "Breakfast",
         "dietary": "Vegetarian",
         "imageUrl": "https://i0.wp.com/wonkywonderful.com/wp-content/uploads/2013/06/Maple-Brown-Rice-Breakfast-Bowl-0.jpg?ssl=1",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -200,6 +207,7 @@
         "cuisine": "Asian",
         "dietary": "Vegetarian",
         "imageUrl": "https://thewoksoflife.com/wp-content/uploads/2024/06/steamed-egg-10.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -210,6 +218,7 @@
         "cuisine": "Eastern European",
         "dietary": "Vegetarian",
         "imageUrl": "https://foodnheal.com/wp-content/uploads/2020/11/cooked-buckwheat-groats_.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -220,6 +229,7 @@
         "cuisine": "Indian",
         "dietary": "Vegetarian",
         "imageUrl": "https://ericasrecipes.com/wp-content/uploads/2014/01/Simple-Rice-with-Turmeric-and-Peas-4a.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -230,6 +240,7 @@
         "cuisine": "Asian",
         "dietary": "Vegetarian",
         "imageUrl": "https://thefoodietakesflight.com/wp-content/uploads/2022/01/Steamed-Tofu-with-Soy-Garlic-Sauce-2-of-3-500x375.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -240,6 +251,7 @@
         "cuisine": "European",
         "dietary": "Vegetarian",
         "imageUrl": "https://www.budgetbytes.com/wp-content/uploads/2013/09/Baked-Barley-with-Mushrooms-bowl.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -250,6 +262,7 @@
         "cuisine": "Thai",
         "dietary": "Vegetarian",
         "imageUrl": "https://thatwhichnourishes.com/wp-content/uploads/2016/05/coconut-rice-edited.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -260,6 +273,7 @@
         "cuisine": "Asian Fusion",
         "dietary": "Vegetarian",
         "imageUrl": "https://www.eatingbirdfood.com/wp-content/uploads/2023/04/kale-and-sweet-potato-brown-rice-bowls-hero.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -270,6 +284,7 @@
         "cuisine": "Mediterranean",
         "dietary": "Vegetarian",
         "imageUrl": "https://emilybites.com/wp-content/uploads/2022/07/Mediterranean-Couscous-Salad-5b.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -280,6 +295,7 @@
         "cuisine": "Beverage",
         "dietary": "Vegetarian",
         "imageUrl": "https://spoonuniversity.com/cdn-cgi/image/width=734,height=489.33333333333,fit=cover,format=auto/https://s3.amazonaws.com/secretsaucefiles/photos/images/000/136/003/large/Screenshot_%28123%29.png?1487791767",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -290,6 +306,7 @@
         "cuisine": "Persian",
         "dietary": "Vegetarian",
         "imageUrl": "https://www.allrecipes.com/thmb/xjurj3TmYEQ5MMdq8s0mGMo4658=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/24606-persian-rice-mfs_149-04ba83bbdc4449f0a97767fff0172dfa.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -300,6 +317,7 @@
         "cuisine": "American",
         "dietary": "Vegetarian",
         "imageUrl": "https://www.thespruceeats.com/thmb/fBQrP7Wcxy6IQaQECznT4zaI9tg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/steamed-corn-on-the-cob-2138219-hero-01-8ba7ab5f6a2f42338ea73e707228b15c.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -310,6 +328,7 @@
         "cuisine": "Fusion",
         "dietary": "Vegetarian",
         "imageUrl": "https://aiyamatcharecipes.com/images/recipes/image_matcha-rice-pudding_1676483504.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -320,6 +339,7 @@
         "cuisine": "Mexican",
         "dietary": "Vegetarian",
         "imageUrl": "https://beanrecipes.com/wp-content/uploads/2021/09/Black-Beans-and-Rice-7.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -330,6 +350,7 @@
         "cuisine": "Mediterranean",
         "dietary": "Seafood",
         "imageUrl": "https://www.healthyseasonalrecipes.com/wp-content/uploads/2023/01/simple-steamed-mussels-with-garlic-sq-041-640x480.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -340,6 +361,7 @@
         "cuisine": "American",
         "dietary": "Vegetarian",
         "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFdh-9kwJOQ2ywo_Otzj79M0VS1we3jIQN3IuJ4i77NGsjLUwdmtfGuFhSo7FRxqPS0DR5quIcjevCQ0lojgwLacF9NToPSSt6pl8_FyFibSXML0azUACR43sAGgnURTlbCYINbW0Husiu/s1600/IMG_2608.JPG",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -350,6 +372,7 @@
         "cuisine": "Healthy",
         "dietary": "Vegetarian",
         "imageUrl": "https://dishingupthedirt.com/wp-content/uploads/2021/03/amaranthporridge.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -360,6 +383,7 @@
         "cuisine": "Middle Eastern",
         "dietary": "Vegetarian",
         "imageUrl": "https://img.apmcdn.org/47c707c6542ec720f7956c088216232abdbf3730/widescreen/55203d-20210723-plenty-more-saffron-date-and-almond-rice-2000.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -370,6 +394,7 @@
         "cuisine": "Asian Fusion",
         "dietary": "Vegetarian",
         "imageUrl": "https://www.indianhealthyrecipes.com/wp-content/uploads/2016/07/peanut-rice-1.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -380,6 +405,7 @@
         "cuisine": "Breakfast",
         "dietary": "Vegetarian",
         "imageUrl": "https://ourbalancedbowl.com/wp-content/uploads/2021/03/IMG_6657.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -390,6 +416,7 @@
         "cuisine": "European",
         "dietary": "Vegetarian",
         "imageUrl": "https://itsavegworldafterall.com/wp-content/uploads/2023/01/Steamed-Brussels-Sprouts-FI.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -400,6 +427,7 @@
         "cuisine": "Japanese",
         "dietary": "Vegetarian",
         "imageUrl": "https://rasamalaysia.com/wp-content/uploads/2014/07/green_tea.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -410,6 +438,7 @@
         "cuisine": "Italian",
         "dietary": "Vegetarian",
         "imageUrl": "https://justbento.com/files/bento/images/ricecookerfritatta-whole2.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -420,6 +449,7 @@
         "cuisine": "Chinese",
         "dietary": "Vegetarian",
         "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2021/01/black-rice-recipe.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -430,6 +460,7 @@
         "cuisine": "Asian Fusion",
         "dietary": "Vegetarian",
         "imageUrl": "https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/ginger-plum-chicken-28699c8f.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -440,6 +471,7 @@
         "cuisine": "Dessert",
         "dietary": "Vegetarian",
         "imageUrl": "https://naturalkitchenschool.com/wp-content/uploads/poached-pears-720x720-1.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -450,6 +482,7 @@
         "cuisine": "Mediterranean",
         "dietary": "Vegetarian",
         "imageUrl": "https://meghanitup.com/wp-content/uploads/2023/03/Lemon-herb-couscous-4-3.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -460,6 +493,7 @@
         "cuisine": "Chinese",
         "dietary": "Dessert",
         "imageUrl": "https://nutsaboutgreens.com/wp-content/uploads/2016/02/IMG_8901-1.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -470,6 +504,7 @@
         "cuisine": "Mediterranean",
         "dietary": "Vegetarian",
         "imageUrl": "https://alwaysfromscratch.com/wp-content/uploads/2023/04/steamed-artichokes-34.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -480,6 +515,7 @@
         "cuisine": "Chinese",
         "dietary": "Vegetarian",
         "imageUrl": "https://images.immediate.co.uk/production/volatile/sites/30/2023/05/One-Pot-Chinese-Five-Spice-Rice440x400-6ddd036.jpg?quality=90&resize=440,400",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -490,6 +526,7 @@
         "cuisine": "Breakfast",
         "dietary": "Vegetarian",
         "imageUrl": "https://www.runningwithspoons.com/wp-content/uploads/2015/01/Brown-Rice-Breakfast-Bowl2.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -500,6 +537,7 @@
         "cuisine": "American",
         "dietary": "Vegetarian",
         "imageUrl": "https://www.eatingwell.com/thmb/82KZhCjlk3SCIkm_zZYRLUHY1Jg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/EWL-262204-steamed-butternut-squash-hero-2744_preview_maxWidth_4000_maxHeight_4000_ppi_300_quality_100-1f05e2098dc94e15bb890be182f6e651.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -510,6 +548,7 @@
         "cuisine": "Asian",
         "dietary": "Vegetarian",
         "imageUrl": "https://bebeloveokazu.com/wp-content/uploads/2012/10/Osekihan-2.jpg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       },
@@ -520,6 +559,7 @@
         "cuisine": "European",
         "dietary": "Vegetarian",
         "imageUrl": "https://img.taste.com.au/sG5A9m91/taste/2016/11/steamed-baby-potatoes-with-thyme-81602-1.jpeg",
+        "link": "",
         "createdAt": "2023-10-01T00:00:00Z",
         "updatedAt": "2023-10-01T00:00:00Z"
       }
